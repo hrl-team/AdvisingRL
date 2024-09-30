@@ -809,6 +809,9 @@ ggplot() +
 # Main effects are removed along with their interaction terms, but interaction terms are only removed without affecting main effects
 # as it makes little sense to make a model with an interaction term and not the main effects
 
+##In the paper, we actually report a more standard form of effect size (just the OR for each term, which is the exponential of the coefficient)
+#This is just in case someone is not content and would like a solution that partitions variance (which is something very hard to do in mixed models)
+
 library(MuMIn)
 
 effect_size_R2 <- function(model_full) {
